@@ -273,7 +273,7 @@ GEM
       rubocop-rails
     ruby-progressbar (1.13.0)
     securerandom (0.3.2)
-    shoulda-matchers (5.3.0)
+    shoulda-matchers (6.4.0)
       activesupport (>= 5.2.0)
     solid_cable (3.0.2)
       actioncable (>= 7.2)
@@ -339,7 +339,7 @@ DEPENDENCIES
   rails (~> 8.0.0)
   rspec-rails (~> 7.1)
   rubocop-rails-omakase
-  shoulda-matchers (~> 5.0)
+  shoulda-matchers (~> 6.4)
   solid_cable
   solid_cache
   solid_queue
