@@ -3,7 +3,8 @@ class StripeWebhooksController < ActionController::Base
 
   STRIPE_WEBHOOK_EVENTS = {
     subscription_created: "customer.subscription.created",
-    invoice_paid: "invoice.paid"
+    invoice_paid: "invoice.paid",
+    subscription_canceled: "customer.subscription.deleted"
   }
 
   private

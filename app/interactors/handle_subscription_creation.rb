@@ -1,4 +1,3 @@
-# app/interactors/handle_subscription_creation.rb
 class HandleSubscriptionCreation
   include Interactor
 
@@ -8,6 +7,7 @@ class HandleSubscriptionCreation
 
     begin
       Subscription.create!(stripe_subscription_id: subscription.id, state: :unpaid)
+      context.status = :created
     rescue ActiveRecord::RecordInvalid => e
       context.fail!(error: "Error processing subscription created event", details: e.message)
     rescue ActiveRecord::RecordNotUnique => e
